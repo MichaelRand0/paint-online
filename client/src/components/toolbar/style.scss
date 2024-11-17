@@ -1,0 +1,13 @@
+@import '/src/style/index.scss';
+
+.toolbar {
+  background-color: white;
+  min-height: dynamic-vw(1920, 40px);
+  box-shadow: $toolbar-shadow;
+  &__wrapper {
+    padding: dynamic-vw(1920, 5px) dynamic-vw(1920, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,27 @@
+@import './index.scss';
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.gap-20 {
+  gap: dynamic-vw(1920, 20px);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.hover-opacity-5 {
+  transition: .1s ease-in-out all;
+  opacity: 1;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.z-index-1 {
+  position: relative;
+  z-index: 1;
+}

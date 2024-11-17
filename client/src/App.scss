@@ -1,0 +1,42 @@
+@import '/src/style/atomic.scss';
+
+.app {
+  height: 99vh;
+  &__header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:disabled {
+        opacity: .5;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    &-label {
+      margin-right: 20px;
+    }
+
+    &-input {
+      font-size: 16px;
+      background-color: bisque;
+      padding: 8px 8px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
