@@ -14,8 +14,9 @@ import accountState from './store/accountState'
 import axios from 'axios'
 
 function App() {
+  const port = process.env.PORT || 5000
   const syncSession = () => {
-    axios.get(`http://localhost:5000/session/${params?.id}`).then((resp) => {
+    axios.get(`http://localhost:${port}/session/${params?.id}`).then((resp) => {
       const base64 = JSON.parse(resp?.data)?.data
 
       const ctx = canvasState.canvasRef?.current.getContext('2d')
@@ -40,7 +41,7 @@ function App() {
   const params = useParams()
 
   const loginSubmit = (data: LoginFormDataType) => {
-    const websocket = new WebSocket('ws://localhost:5000/')
+    const websocket = new WebSocket(`ws://localhost:${port}/`)
 
     accountState.setWebsocket(websocket)
 
